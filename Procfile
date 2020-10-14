@@ -1,1 +1,1 @@
-web: python covid real time dashboard.py
+web: python covid19.py
