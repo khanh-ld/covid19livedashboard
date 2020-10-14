@@ -1,1 +1,1 @@
-web: python covid19.py
+web: gunicorn app:server
