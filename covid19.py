@@ -1,3 +1,7 @@
+import dash
+import dash_core_components as dcc
+import dash_html_components as html
+
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 import pandas as pd
@@ -184,8 +188,17 @@ fig.update_layout(
     ]
 )
 
-fig.write_html('first_figure.html', auto_open= True)
-                
-        
-            
-          
+app = dash.Dash(__name__)
+
+server = app.server
+
+app.layout = html.Div(style={'textAlign': 'Center'},  children=[
+    
+    dcc.Graph(
+        style={"height":"100vh"} , 
+        figure=fig,
+    )
+])
+
+if __name__ == '__main__':
+    app.run_server(debug=True)   
