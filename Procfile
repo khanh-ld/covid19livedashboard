@@ -1,1 +1,1 @@
-web: gunicorn covid real time dashboard.py
+web: python covid real time dashboard.py
